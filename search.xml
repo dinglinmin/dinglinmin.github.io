@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2020/04/19/hello-world/"/>
+      <url>/2020/04/19/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="quick-start"><a class="markdownIt-Anchor" href="#quick-start"></a> Quick Start</h2><h3 id="create-a-new-post"><a class="markdownIt-Anchor" href="#create-a-new-post"></a> Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="run-server"><a class="markdownIt-Anchor" href="#run-server"></a> Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="generate-static-files"><a class="markdownIt-Anchor" href="#generate-static-files"></a> Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="deploy-to-remote-sites"><a class="markdownIt-Anchor" href="#deploy-to-remote-sites"></a> Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>SASA</title>
+      <link href="/2020/04/18/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/"/>
+      <url>/2020/04/18/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="谜题3长整除"><a class="markdownIt-Anchor" href="#谜题3长整除"></a> 谜题3:长整除</h1><a id="more"></a><h2 id="1-结果溢出"><a class="markdownIt-Anchor" href="#1-结果溢出"></a> 1、结果溢出</h2><p>下面程序会打印什么呢？</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> chapter.one;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Nass</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2019/11/14 09:30</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LoingDivision</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">final</span> <span class="keyword">long</span> MICROS_PER_DAY = <span class="number">24</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">1000</span> * <span class="number">1000</span>;</span><br><span class="line">        <span class="keyword">final</span> <span class="keyword">long</span> MILLIS_PER_DAY = <span class="number">24</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">1000</span>;</span><br><span class="line">        System.out.println(MICROS_PER_DAY / MILLIS_PER_DAY);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>运行结果：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span></span><br></pre></td></tr></table></figure><p>这显然和我们想要的结果（1000）不相符合。</p><p><strong>原因：</strong></p><p>​24 * 60 * 60 * 1000 * 1000，这个计算完全是以int运算来执行的，计算已经溢出，并且只有在运算完成后，器结果才被提升为long。</p><p>​<strong>在Java中，若干个int数值相乘时，将得到另一个int数值。</strong></p><hr /><h2 id="2-解决溢出"><a class="markdownIt-Anchor" href="#2-解决溢出"></a> 2、解决溢出</h2><p>​通常使用long常量来替代int常量作为每一个乘积的第一个因子，这样做可以强制表达式中所有的后续计算都用long运算来完成。(24-----&gt;24L)</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> chapter.one;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Nass</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2019/11/14 09:30</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LoingDivision</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">final</span> <span class="keyword">long</span> MICROS_PER_DAY = <span class="number">24L</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">1000</span> * <span class="number">1000</span>;</span><br><span class="line">        <span class="keyword">final</span> <span class="keyword">long</span> MILLIS_PER_DAY = <span class="number">24L</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">1000</span>;</span><br><span class="line">        System.out.println(MICROS_PER_DAY / MILLIS_PER_DAY);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>运行结果：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1000</span></span><br></pre></td></tr></table></figure><hr /><h2 id="3-警示️"><a class="markdownIt-Anchor" href="#3-警示️"></a> 3、警示⚠️</h2><p>​**当操作很大的数字时，千万要提防溢出——它可是一个缄默杀手。**即使用来保存结果的变量已足够大，也并不意味着要产生结果的计算具有正确类型。当你拿不准时，就是用long运算来执行整个计算。</p><p>​降低缄默溢出产出的可能性也许确实是值得做的事。这可以通过支持不会产出缄默溢出的运算来实现。程序可以抛出溢额异常而不是直接溢出。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 基础 </category>
+          
+          <category> 再基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MySQL </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>175.组合两个表</title>
+      <link href="/2019/12/22/175.%E7%BB%84%E5%90%88%E4%B8%A4%E4%B8%AA%E8%A1%A8/"/>
+      <url>/2019/12/22/175.%E7%BB%84%E5%90%88%E4%B8%A4%E4%B8%AA%E8%A1%A8/</url>
+      
+        <content type="html"><![CDATA[<h1 id="175组合两个表"><a class="markdownIt-Anchor" href="#175组合两个表"></a> 175.组合两个表</h1><h2 id="表结构"><a class="markdownIt-Anchor" href="#表结构"></a> 表结构</h2><p>表1:Person</p><p>PersonId 是表主键</p><table><thead><tr><th style="text-align:center">列名</th><th style="text-align:center">类型</th></tr></thead><tbody><tr><td style="text-align:center">PersonId</td><td style="text-align:center">int</td></tr><tr><td style="text-align:center">FirstName</td><td style="text-align:center">varchar</td></tr><tr><td style="text-align:center">lastName</td><td style="text-align:center">varchar</td></tr></tbody></table><p>表2:Address</p><p>AddressId 是表主键</p><table><thead><tr><th style="text-align:center">列名</th><th style="text-align:center">类型</th></tr></thead><tbody><tr><td style="text-align:center">Address</td><td style="text-align:center">int</td></tr><tr><td style="text-align:center">PersonId</td><td style="text-align:center">int</td></tr><tr><td style="text-align:center">City</td><td style="text-align:center">varchar</td></tr><tr><td style="text-align:center">State</td><td style="text-align:center">varchar</td></tr></tbody></table><p>编写一个 SQL 查询，满足条件：无论 person 是否有地址信息，都需要基于上述两表提供 person 的以下信息：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FirstName, LastName, City, State</span><br></pre></td></tr></table></figure><h2 id="sql代码"><a class="markdownIt-Anchor" href="#sql代码"></a> SQL代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">create table Person(</span><br><span class="line">PersonId int,</span><br><span class="line">FirstName varchar(20),</span><br><span class="line">LastName varchar(20),</span><br><span class="line">primary key(PersonId)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">create table Address(</span><br><span class="line">Address int,</span><br><span class="line">PersonId int,</span><br><span class="line">City varchar(100),</span><br><span class="line">State varchar(100),</span><br><span class="line">primary key(Address)</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">insert into Person values(1, &quot;Wang&quot;, &quot;Allen&quot;);</span><br><span class="line">insert into Address values(1, 2, &quot;New York City&quot;, &quot;New York&quot;);</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line">预期输出结果：</span><br><span class="line">&quot;Allen&quot;, &quot;Wang&quot;, null, null</span><br><span class="line">*&#x2F;</span><br><span class="line"></span><br><span class="line">select Person.FirstName, Person.LastName, Address.City, Address.State </span><br><span class="line">from Person</span><br><span class="line">left join Address</span><br><span class="line">on Person.PersonId &#x3D; Address.PersonId;</span><br></pre></td></tr></table></figure><p>结果：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Wang Allen NUll NUll</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> DataBase </category>
+          
+          <category> MySQL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MySQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>运算符</title>
+      <link href="/2019/12/18/%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
+      <url>/2019/12/18/%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
+      
+        <content type="html"><![CDATA[<h1 id="运算符1"><a class="markdownIt-Anchor" href="#运算符1"></a> 运算符（1）</h1><h2 id="j-j"><a class="markdownIt-Anchor" href="#j-j"></a> j = j++?</h2><p>以下程序将输出j是多少？</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test1</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> j = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++)&#123;</span><br><span class="line">            j = j++;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(j);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>结果：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span></span><br></pre></td></tr></table></figure><p>没有达到我们想要的结果100。</p><h2 id="原因"><a class="markdownIt-Anchor" href="#原因"></a> 原因：</h2><h3 id="先前知识"><a class="markdownIt-Anchor" href="#先前知识"></a> 先前知识：</h3><p>​单目运算符的优先级 &gt; 赋值运算符的优先级</p><h3 id="例子1-j-i"><a class="markdownIt-Anchor" href="#例子1-j-i"></a> 例子1、j = i++</h3><p>​对于这个表达式，分析过程如下：由于先执行++运算，再执行赋值运算，即先把i的值自增1，再把原来i的值赋值给j，相当于平时我们在程序设计中的思路：先把i的值赋值给j，再把i的值自增1；</p><p>内存分析如下图：</p><p><img src="/" class="lazyload" data-src="%E8%BF%90%E7%AE%97%E7%AC%A6/a.png"  alt="" /></p><h3 id="例子2-j-j"><a class="markdownIt-Anchor" href="#例子2-j-j"></a> 例子2、j = j++</h3><p>​对于这个表达式，同样分析过程如下：由于先执行++运算，再执行赋值运算，即先把j（右边）的值自增1，再把原来j（右边）的值赋值给j（左边）;</p><p>内存分析如下图：</p><p><img src="/" class="lazyload" data-src="%E8%BF%90%E7%AE%97%E7%AC%A6/b.png"  alt="" /></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 基础知识 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>XXX</title>
+      <link href="/2019/12/17/XXX/"/>
+      <url>/2019/12/17/XXX/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">flowchat</span><br><span class="line">st&#x3D;&gt;start: 生产者线程进入 :&gt;https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_21808961</span><br><span class="line">op1&#x3D;&gt;operation: 设置Info类的名称和内容</span><br><span class="line">op2&#x3D;&gt;operation: 修改标志位</span><br><span class="line">op3&#x3D;&gt;operation: 等待线程唤醒</span><br><span class="line">op4&#x3D;&gt;operation: 等待消费者取走</span><br><span class="line">cond&#x3D;&gt;condition: 判断标志位</span><br><span class="line"></span><br><span class="line">st(right)-&gt;cond-&gt;op1-&gt;op2-&gt;op3</span><br><span class="line">cond(yes,right)-&gt;op1</span><br><span class="line">cond(no)-&gt;op4</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>img</title>
+      <link href="/2019/12/17/img/"/>
+      <url>/2019/12/17/img/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>谜题26_在循环中</title>
+      <link href="/2019/12/17/%E8%B0%9C%E9%A2%9826_%E5%9C%A8%E5%BE%AA%E7%8E%AF%E4%B8%AD/"/>
+      <url>/2019/12/17/%E8%B0%9C%E9%A2%9826_%E5%9C%A8%E5%BE%AA%E7%8E%AF%E4%B8%AD/</url>
+      
+        <content type="html"><![CDATA[<h1 id="谜题26_在循环中"><a class="markdownIt-Anchor" href="#谜题26_在循环中"></a> 谜题26_在循环中</h1><h2 id="下面的程序计算了一个循环的迭代次数它将打印什么"><a class="markdownIt-Anchor" href="#下面的程序计算了一个循环的迭代次数它将打印什么"></a> 下面的程序计算了一个循环的迭代次数，它将打印什么？</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> END = Integer.MAX_VALUE;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> START = Integer.MIN_VALUE -<span class="number">100</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = START; i &lt;=END; i++)&#123;</span><br><span class="line">        count++;</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(count);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>预期的结果是</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">100</span></span><br></pre></td></tr></table></figure><p>这个循环是在循环索引i小于或等于终止值时持续运行。</p><p>问题在于这个循环会在循环索引（i）小于或等于Integer.MAX_VALUE时持续运行，但所有的int变量都是小于或等于Integer.MAX_VALUE。</p><p>当i达到Integer.MAX_VALUE，并且再次执行增量操作时，就会形成上溢越界，i又绕回到了Integer.MIN_VALUE。</p><h2 id="解决方法"><a class="markdownIt-Anchor" href="#解决方法"></a> 解决方法</h2><h3 id="方法1"><a class="markdownIt-Anchor" href="#方法1"></a> 方法（1）</h3><p>如果需要的循环会迭代到int数值的边界，最好使用一个long变量作为循环索引。只需将循环索引的类型从int改变为long就可以解决这个问题，具有清晰性和简洁性。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">long</span> i = START; i &lt;=END; i++)</span><br></pre></td></tr></table></figure><h3 id="方法2"><a class="markdownIt-Anchor" href="#方法2"></a> 方法（2）</h3><p>不使用long类型的索引变量也可以解决问题，但不是很美观。</p><p>但是如果在所有的（或者几乎所有的）int数值上迭代，那么使用int类型的循环索引的速度大约可以提高一倍。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = START;</span><br><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line">count++;<span class="comment">//function(i)</span></span><br><span class="line">&#125;<span class="keyword">while</span>(i++ != END);</span><br><span class="line">System.out.println(count);</span><br></pre></td></tr></table></figure><h2 id="提示️"><a class="markdownIt-Anchor" href="#提示️"></a> 提示⚠️</h2><p>在代码中值得去考虑：对那些在整数范围之上进行迭代的循环进行特殊设计。</p><p>整数类型包括byte，char，short，int和long。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+          <category> Java_Puzzlers </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>谜题2_找零时刻</title>
+      <link href="/2019/12/11/%E8%B0%9C%E9%A2%982_%E6%89%BE%E9%9B%B6%E6%97%B6%E5%88%BB/"/>
+      <url>/2019/12/11/%E8%B0%9C%E9%A2%982_%E6%89%BE%E9%9B%B6%E6%97%B6%E5%88%BB/</url>
+      
+        <content type="html"><![CDATA[<h1 id="谜题2找零时刻"><a class="markdownIt-Anchor" href="#谜题2找零时刻"></a> 谜题2:找零时刻</h1><h2 id="1-有一张2元的钞票买了一个价值110元的物品那么应该找给他多少钱呢"><a class="markdownIt-Anchor" href="#1-有一张2元的钞票买了一个价值110元的物品那么应该找给他多少钱呢"></a> 1、有一张2元的钞票，买了一个价值1.10元的物品，那么应该找给他多少钱呢？</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> chapter.one;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.math.BigDecimal;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Nass</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2019/11/13 19:30</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Change</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="number">2.00</span>-<span class="number">1.10</span>);</span><br><span class="line">      System.out.println(<span class="number">2.00</span>-<span class="number">1.25</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>运行结果：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0.8999999999999999</span></span><br><span class="line"><span class="number">0.75</span></span><br></pre></td></tr></table></figure><p>显然这和我们想要的结果（0.90）是不一致的。</p><p><strong>原因</strong>：</p><p>1.1(十进制) = 1.0001100110011001(二进制)超出计算精度，结果保留十六位小数</p><p>​1.10 = 2<sup>0+1/(2</sup>4) + 1/(2^5) + 1/(2^8) + …</p><p>​其中1.1只能无限循环下去，这就意味着0.1在计算机中不能被精确表示</p><p>1.25(十进制) = 1.01(二进制)</p><p>​1.25 = 2<sup>0+1/(2</sup>2)</p><p>​1.25可以在计算机中精确表示</p><p><strong>并不是所有的小数都可以用二进制浮点数精确表示：</strong>：</p><p>二进制浮点对于货币计算是非常不适合的，因为它不可能将0.1或者10的其它任何次负幂——精确表示为一个长度有限的二进制小数</p><hr /><h2 id="2-解决方法"><a class="markdownIt-Anchor" href="#2-解决方法"></a> 2、解决方法</h2><p><strong>使用BigDecimal:</strong></p><p>​<strong>一定要用BigDecimal（String）构造器，千万不要用BigDecimal（double）构造器</strong>。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">BigDecimal a = <span class="keyword">new</span> BigDecimal(<span class="string">"2.00"</span>);</span><br><span class="line">System.out.println(a);</span><br><span class="line">BigDecimal b = <span class="keyword">new</span> BigDecimal(<span class="number">1.10</span>);</span><br><span class="line">System.out.println(b);</span><br><span class="line"></span><br><span class="line">BigDecimal result = <span class="keyword">new</span> BigDecimal(<span class="string">"2.00"</span>).subtract(<span class="keyword">new</span> BigDecimal(<span class="string">"1.10"</span>))</span><br><span class="line">System.out.println(result);</span><br></pre></td></tr></table></figure><p>运行结果：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2.00</span></span><br><span class="line"><span class="number">1.100000000000000088817841970012523233890533447265625</span></span><br><span class="line">result = <span class="number">0.90</span></span><br></pre></td></tr></table></figure><hr /><h2 id="3-警示️"><a class="markdownIt-Anchor" href="#3-警示️"></a> 3、警示⚠️</h2><p><strong>在需要精确答案的地方，要避免使用float和double；对于货币计算，要使用int、long、BigDecimal。</strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+          <category> Java_Puzzlers </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>谜题11_最后的笑声</title>
+      <link href="/2019/11/27/%E8%B0%9C%E9%A2%9811_%E6%9C%80%E5%90%8E%E7%9A%84%E7%AC%91%E5%A3%B0/"/>
+      <url>/2019/11/27/%E8%B0%9C%E9%A2%9811_%E6%9C%80%E5%90%8E%E7%9A%84%E7%AC%91%E5%A3%B0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="谜题11_最后的笑声"><a class="markdownIt-Anchor" href="#谜题11_最后的笑声"></a> 谜题11_最后的笑声</h1><h2 id="1-下面的程序将打印什么"><a class="markdownIt-Anchor" href="#1-下面的程序将打印什么"></a> 1、下面的程序将打印什么？</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LastLaugh</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"H"</span> + <span class="string">"a"</span>);</span><br><span class="line">        System.out.println(<span class="string">'H'</span> + <span class="string">'a'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>预期结果：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Ha</span><br><span class="line">Ha</span><br></pre></td></tr></table></figure><p>实际结果：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Ha</span><br><span class="line"><span class="number">169</span></span><br></pre></td></tr></table></figure><hr /><h2 id="2-原因"><a class="markdownIt-Anchor" href="#2-原因"></a> 2、原因：</h2><ol><li>第一个参数是表达式：“H” + “a”,显然它执行的是一个字符串连接。</li><li>第二个参数是表达式：‘H’ + ‘a’。问题在于’H’ 、'a’是字符型字面常量，因为这两个操作数都不是字符串类型的，所以+操作符执行的是加法而不是字符串链接。</li></ol><hr /><h2 id="3-改进的方法"><a class="markdownIt-Anchor" href="#3-改进的方法"></a> 3、改进的方法：</h2><ol><li><p>可以利用一个字符串缓冲区</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">StringBuffer sb = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">sb.append(<span class="string">'H'</span>);</span><br><span class="line">sb.append(<span class="string">'a'</span>);</span><br><span class="line">System.out.println(sb);</span><br></pre></td></tr></table></figure></li><li><p>常用的惯用法是用一个空字符串（&quot;&quot;）作为一个连接序列的开始</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="string">""</span>+<span class="string">'H'</span> + <span class="string">'a'</span>);</span><br></pre></td></tr></table></figure></li><li><p>如果使用的是jdk5.0，还可以使用</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.printf(<span class="string">"%c%c"</span>,<span class="string">'H'</span>,<span class="string">'a'</span>);</span><br></pre></td></tr></table></figure></li><li></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+          <category> Java_Puzzlers </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>谜题1_奇数性</title>
+      <link href="/2019/11/16/%E8%B0%9C%E9%A2%981_%E5%A5%87%E6%95%B0%E6%80%A7/"/>
+      <url>/2019/11/16/%E8%B0%9C%E9%A2%981_%E5%A5%87%E6%95%B0%E6%80%A7/</url>
+      
+        <content type="html"><![CDATA[<h1 id="谜题1奇数性"><a class="markdownIt-Anchor" href="#谜题1奇数性"></a> 谜题1:奇数性</h1><a id="more"></a><h2 id="1-旧方法判断奇偶性"><a class="markdownIt-Anchor" href="#1-旧方法判断奇偶性"></a> 1、旧方法：判断奇偶性</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> chapter.one;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Nass</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2019/11/13 17:04</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JudgeParity</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isOdd</span><span class="params">(<span class="keyword">int</span> number)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> number % <span class="number">2</span> == <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//定义四个变量</span></span><br><span class="line">        <span class="keyword">int</span> numOne = -<span class="number">4</span>;</span><br><span class="line">        <span class="keyword">int</span> numTwo = <span class="number">4</span>;</span><br><span class="line">        <span class="keyword">int</span> numThree = <span class="number">5</span>;</span><br><span class="line">        <span class="keyword">int</span> numFour = -<span class="number">5</span>;</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"4 % 2 = "</span>+(numOne % <span class="number">2</span>));</span><br><span class="line">        System.out.println(<span class="string">"4是否是奇数："</span>+isOdd(numOne));</span><br><span class="line">        System.out.println(<span class="string">"-4 % 2 = "</span>+(numTwo % <span class="number">2</span>));</span><br><span class="line">        System.out.println(<span class="string">"-4是否是奇数："</span>+isOdd(numTwo));</span><br><span class="line">        System.out.println(<span class="string">"5 % 2 = "</span>+(numThree % <span class="number">2</span>));</span><br><span class="line">        System.out.println(<span class="string">"5是否是奇数："</span>+isOdd(numThree));</span><br><span class="line">        System.out.println(<span class="string">"-5 % 2 = "</span>+(numFour % <span class="number">2</span>));</span><br><span class="line">        System.out.println(<span class="string">"-5是否是奇数："</span>+isOdd(numFour));</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>运行结果：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span> % <span class="number">2</span> = <span class="number">0</span></span><br><span class="line"><span class="number">4</span>是否是奇数：<span class="keyword">false</span></span><br><span class="line">-<span class="number">4</span> % <span class="number">2</span> = <span class="number">0</span></span><br><span class="line">-<span class="number">4</span>是否是奇数：<span class="keyword">false</span></span><br><span class="line"><span class="number">5</span> % <span class="number">2</span> = <span class="number">1</span></span><br><span class="line"><span class="number">5</span>是否是奇数：<span class="keyword">true</span></span><br><span class="line">-<span class="number">5</span> % <span class="number">2</span> = -<span class="number">1</span></span><br><span class="line">-<span class="number">5</span>是否是奇数：<span class="keyword">false</span></span><br></pre></td></tr></table></figure><p>显然运行结果是出乎我们的意料的(-5 % 2 = -1)。以上方法只能判断非负整数的奇偶性。</p><hr /><h2 id="2-改进的判断奇偶性"><a class="markdownIt-Anchor" href="#2-改进的判断奇偶性"></a> 2、改进的判断奇偶性</h2><p><strong>当取余操作返回一个非零的结果时，它与左操作数具有相同的正负符号。</strong></p><p><strong>Java的取余操作是与舍弃整除结果小数部分的整数操作整除操作完全匹配的。</strong></p><p>例：-5 % 2 = -1</p><p>​5 % 2 = 1</p><p>​4 % 2 = 0</p><p>​-4 % 2 = 0</p><p>正负偶数对2取余都是0，正奇数对2取余结果是1，负奇数对2取余结果是-1。</p><p>结论：取余结果不为0则为奇数</p><p>​取余结果为0则为偶数</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> chapter.one;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Nass</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2019/11/13 17:07</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JudgeParityPlus</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isOdd</span><span class="params">(<span class="keyword">int</span> number)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> number % <span class="number">2</span> != <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//定义四个变量</span></span><br><span class="line">        <span class="keyword">int</span> numOne = -<span class="number">4</span>;</span><br><span class="line">        <span class="keyword">int</span> numTwo = <span class="number">4</span>;</span><br><span class="line">        <span class="keyword">int</span> numThree = <span class="number">5</span>;</span><br><span class="line">        <span class="keyword">int</span> numFour = -<span class="number">5</span>;</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"4 % 2 = "</span>+(numOne % <span class="number">2</span>));</span><br><span class="line">        System.out.println(<span class="string">"4是否是奇数："</span>+isOdd(numOne));</span><br><span class="line">        System.out.println(<span class="string">"-4 % 2 = "</span>+(numTwo % <span class="number">2</span>));</span><br><span class="line">        System.out.println(<span class="string">"-4是否是奇数："</span>+isOdd(numTwo));</span><br><span class="line">        System.out.println(<span class="string">"5 % 2 = "</span>+(numThree % <span class="number">2</span>));</span><br><span class="line">        System.out.println(<span class="string">"5是否是奇数："</span>+isOdd(numThree));</span><br><span class="line">        System.out.println(<span class="string">"-5 % 2 = "</span>+(numFour % <span class="number">2</span>));</span><br><span class="line">        System.out.println(<span class="string">"-5是否是奇数："</span>+isOdd(numFour));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>运行结果：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span> % <span class="number">2</span> = <span class="number">0</span></span><br><span class="line"><span class="number">4</span>是否是奇数：<span class="keyword">false</span></span><br><span class="line">-<span class="number">4</span> % <span class="number">2</span> = <span class="number">0</span></span><br><span class="line">-<span class="number">4</span>是否是奇数：<span class="keyword">false</span></span><br><span class="line"><span class="number">5</span> % <span class="number">2</span> = <span class="number">1</span></span><br><span class="line"><span class="number">5</span>是否是奇数：<span class="keyword">true</span></span><br><span class="line">-<span class="number">5</span> % <span class="number">2</span> = -<span class="number">1</span></span><br><span class="line">-<span class="number">5</span>是否是奇数：<span class="keyword">true</span></span><br></pre></td></tr></table></figure><hr /><h2 id="3-性能强的判断奇偶性"><a class="markdownIt-Anchor" href="#3-性能强的判断奇偶性"></a> 3、性能强的判断奇偶性</h2><p><strong>“与”、“位与”（&amp;）</strong></p><p>​    按位“与”操作符，如果两个数(最高位是符号位——加粗部分)的二进制，相同位数都是1，则该位结果是1，否则是0.</p><p><strong>5&amp;1</strong></p><p>​    5的二进制是 <strong>0</strong>000 0000 0000 0101</p><p>​    1的二进制是 <strong>0</strong>000 0000 0000 0001</p><p>​          则结果是 <strong>0</strong>000 0000 0000 0001 转为十进制是1。</p><p><strong>-5&amp;1</strong></p><p>​    -5的二进制是 <strong>1</strong>000 0000 0000 0101</p><p>​     1的二进制是 <strong>0</strong>000 0000 0000 0001</p><p>​           则结果是 <strong>0</strong>000 0000 0000 0001 转为十进制是1。</p><p><strong>4&amp;1</strong></p><p>​    4的二进制是 <strong>0</strong>000 0000 0000 0100</p><p>​    1的二进制是 <strong>0</strong>000 0000 0000 0001</p><p>​          则结果是 <strong>0</strong>000 0000 0000 0000 转为十进制是0。</p><p><strong>-4&amp;1</strong></p><p>​    -4的二进制是 <strong>1</strong>000 0000 0000 0100</p><p>​     1的二进制是 <strong>0</strong>000 0000 0000 0001</p><p>​           则结果是 <strong>0</strong>000 0000 0000 0000 转为十进制是0。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> chapter.one;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Nass</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2019/11/13 18:33</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JudgeParitySuper</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isOdd</span><span class="params">(<span class="keyword">int</span> number)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (number &amp; <span class="number">1</span>) != <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//定义四个变量</span></span><br><span class="line">        <span class="keyword">int</span> numOne = -<span class="number">4</span>;</span><br><span class="line">        <span class="keyword">int</span> numTwo = <span class="number">4</span>;</span><br><span class="line">        <span class="keyword">int</span> numThree = <span class="number">5</span>;</span><br><span class="line">        <span class="keyword">int</span> numFour = -<span class="number">5</span>;</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"4 &amp; 1="</span>+(numOne &amp; <span class="number">1</span>));</span><br><span class="line">        System.out.println(<span class="string">"4是否是奇数："</span>+isOdd(numOne));</span><br><span class="line">        System.out.println(<span class="string">"-4 &amp; 1="</span>+(numTwo &amp; <span class="number">1</span>));</span><br><span class="line">        System.out.println(<span class="string">"-4是否是奇数："</span>+isOdd(numTwo));</span><br><span class="line">        System.out.println(<span class="string">"5 &amp; 1="</span>+(numThree &amp; <span class="number">1</span>));</span><br><span class="line">        System.out.println(<span class="string">"5是否是奇数："</span>+isOdd(numThree));</span><br><span class="line">        System.out.println(<span class="string">"-5 &amp; 1="</span>+(numFour &amp; <span class="number">1</span>));</span><br><span class="line">        System.out.println(<span class="string">"-5是否是奇数："</span>+isOdd(numFour));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>运行结果：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span> &amp; <span class="number">1</span>=<span class="number">0</span></span><br><span class="line"><span class="number">4</span>是否是奇数：<span class="keyword">false</span></span><br><span class="line">-<span class="number">4</span> &amp; <span class="number">1</span>=<span class="number">0</span></span><br><span class="line">-<span class="number">4</span>是否是奇数：<span class="keyword">false</span></span><br><span class="line"><span class="number">5</span> &amp; <span class="number">1</span>=<span class="number">1</span></span><br><span class="line"><span class="number">5</span>是否是奇数：<span class="keyword">true</span></span><br><span class="line">-<span class="number">5</span> &amp; <span class="number">1</span>=<span class="number">1</span></span><br><span class="line">-<span class="number">5</span>是否是奇数：<span class="keyword">true</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+          <category> Java_Puzzlers </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>谜题4_初级问题</title>
+      <link href="/2019/11/14/%E8%B0%9C%E9%A2%984_%E5%88%9D%E7%BA%A7%E9%97%AE%E9%A2%98/"/>
+      <url>/2019/11/14/%E8%B0%9C%E9%A2%984_%E5%88%9D%E7%BA%A7%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<h1 id="谜题4初级问题"><a class="markdownIt-Anchor" href="#谜题4初级问题"></a> 谜题4:初级问题</h1><p>下面代码的运行结果是不是66666呢？</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> chapter.one;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Nass</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2019/11/14 09:57</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Elementary</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="number">12345</span> + <span class="number">5432l</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>运行结果：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">17777</span></span><br></pre></td></tr></table></figure><p>这显然和我们想要的结果（66666）不相符合。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">‘<span class="number">12345</span>’ 读作 ‘一二三四五’</span><br><span class="line">‘<span class="number">5432l</span>’ 读作 ‘五四三二L’ 最后一个是小写的l</span><br></pre></td></tr></table></figure><p><strong>差别：</strong></p><p>​数字1的水平笔画（称为“臂（arm）“）和垂直笔画（称为”茎（stem）“）之间是一个锐角，而与此相比的是，小写字母l的臂和茎之间是一个直角（看上面的代码）。</p><h1 id="大喊恶心这也是个初级问题"><a class="markdownIt-Anchor" href="#大喊恶心这也是个初级问题"></a> 大喊“恶心”——这也是个初级问题</h1><h2 id="警示️"><a class="markdownIt-Anchor" href="#警示️"></a> 警示⚠️：</h2><p>​<strong>1、在long类型字面常量中，一定要用大写的L，千万不要用小写的l。</strong></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="number">12345</span> + <span class="number">5432L</span>);</span><br></pre></td></tr></table></figure><p>​<strong>2、要避免使用单个I字母作为变量名。</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; l &#x3D; new ArrayList&lt;String&gt;();</span><br><span class="line">l.add(&quot;Bad&quot;);</span><br><span class="line">System.out.println(l);</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+          <category> Java_Puzzlers </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>谜题3_长整除</title>
+      <link href="/2019/11/14/%E8%B0%9C%E9%A2%983_%E9%95%BF%E6%95%B4%E9%99%A4/"/>
+      <url>/2019/11/14/%E8%B0%9C%E9%A2%983_%E9%95%BF%E6%95%B4%E9%99%A4/</url>
+      
+        <content type="html"><![CDATA[<h1 id="谜题3长整除"><a class="markdownIt-Anchor" href="#谜题3长整除"></a> 谜题3:长整除</h1><h2 id="1-结果溢出"><a class="markdownIt-Anchor" href="#1-结果溢出"></a> 1、结果溢出</h2><p>下面程序会打印什么呢？</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> chapter.one;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Nass</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2019/11/14 09:30</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LoingDivision</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">final</span> <span class="keyword">long</span> MICROS_PER_DAY = <span class="number">24</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">1000</span> * <span class="number">1000</span>;</span><br><span class="line">        <span class="keyword">final</span> <span class="keyword">long</span> MILLIS_PER_DAY = <span class="number">24</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">1000</span>;</span><br><span class="line">        System.out.println(MICROS_PER_DAY / MILLIS_PER_DAY);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>运行结果：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span></span><br></pre></td></tr></table></figure><p>这显然和我们想要的结果（1000）不相符合。</p><p><strong>原因：</strong></p><p>​24 * 60 * 60 * 1000 * 1000，这个计算完全是以int运算来执行的，计算已经溢出，并且只有在运算完成后，器结果才被提升为long。</p><p>​<strong>在Java中，若干个int数值相乘时，将得到另一个int数值。</strong></p><hr /><h2 id="2-解决溢出"><a class="markdownIt-Anchor" href="#2-解决溢出"></a> 2、解决溢出</h2><p>​通常使用long常量来替代int常量作为每一个乘积的第一个因子，这样做可以强制表达式中所有的后续计算都用long运算来完成。(24-----&gt;24L)</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> chapter.one;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Nass</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2019/11/14 09:30</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LoingDivision</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">final</span> <span class="keyword">long</span> MICROS_PER_DAY = <span class="number">24L</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">1000</span> * <span class="number">1000</span>;</span><br><span class="line">        <span class="keyword">final</span> <span class="keyword">long</span> MILLIS_PER_DAY = <span class="number">24L</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">1000</span>;</span><br><span class="line">        System.out.println(MICROS_PER_DAY / MILLIS_PER_DAY);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>运行结果：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1000</span></span><br></pre></td></tr></table></figure><hr /><h2 id="3-警示️"><a class="markdownIt-Anchor" href="#3-警示️"></a> 3、警示⚠️</h2><p>​**当操作很大的数字时，千万要提防溢出——它可是一个缄默杀手。**即使用来保存结果的变量已足够大，也并不意味着要产生结果的计算具有正确类型。当你拿不准时，就是用long运算来执行整个计算。</p><p>​降低缄默溢出产出的可能性也许确实是值得做的事。这可以通过支持不会产出缄默溢出的运算来实现。程序可以抛出溢额异常而不是直接溢出。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+          <category> Java_Puzzlers </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>包命名</title>
+      <link href="/2019/11/13/1%E3%80%81%E5%91%BD%E5%90%8D/"/>
+      <url>/2019/11/13/1%E3%80%81%E5%91%BD%E5%90%8D/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1-命名"><a class="markdownIt-Anchor" href="#1-命名"></a> 1、命名</h1><h2 id="11包名"><a class="markdownIt-Anchor" href="#11包名"></a> 1.1包名</h2><p>包名统一使用小写，点分隔符之间有且仅有一个自然语义的英语单词。包名统一使用单数形式，但是类名如果有复数含义，类名可以使用复数形式</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">com.alibaba.mpp.util </span><br><span class="line">com.taobao.tddl.domain.dto</span><br></pre></td></tr></table></figure><h2 id="12类名"><a class="markdownIt-Anchor" href="#12类名"></a> 1.2类名</h2><p><img src="/" class="lazyload" data-src="/img/a.jpg"  alt="" /></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+          <category> Java编程规范 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>

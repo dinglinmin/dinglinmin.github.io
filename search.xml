@@ -35,9 +35,9 @@
       
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> MySQL </tag>
+            
+            <tag> Java </tag>
             
         </tags>
       
@@ -96,7 +96,7 @@
       <link href="/2019/12/17/XXX/"/>
       <url>/2019/12/17/XXX/</url>
       
-        <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">flowchat</span><br><span class="line">st&#x3D;&gt;start: 生产者线程进入 :&gt;https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_21808961</span><br><span class="line">op1&#x3D;&gt;operation: 设置Info类的名称和内容</span><br><span class="line">op2&#x3D;&gt;operation: 修改标志位</span><br><span class="line">op3&#x3D;&gt;operation: 等待线程唤醒</span><br><span class="line">op4&#x3D;&gt;operation: 等待消费者取走</span><br><span class="line">cond&#x3D;&gt;condition: 判断标志位</span><br><span class="line"></span><br><span class="line">st(right)-&gt;cond-&gt;op1-&gt;op2-&gt;op3</span><br><span class="line">cond(yes,right)-&gt;op1</span><br><span class="line">cond(no)-&gt;op4</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">flowchat</span><br><span class="line">st&#x3D;&gt;start: 生产者线程进入 :&gt;https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_21808961</span><br><span class="line">op1&#x3D;&gt;operation: 设置Info类的名称和内容</span><br><span class="line">op2&#x3D;&gt;operation: 修改标志位</span><br><span class="line">op3&#x3D;&gt;operation: 等待线程唤醒</span><br><span class="line">op4&#x3D;&gt;operation: 等待消费者取走</span><br><span class="line">cond&#x3D;&gt;condition: 判断标志位</span><br><span class="line"></span><br><span class="line">st(right)-&gt;cond-&gt;op1-&gt;op2-&gt;op3</span><br><span class="line">cond(yes,right)-&gt;op1</span><br><span class="line">cond(no)-&gt;op4</span><br></pre></td></tr></table></figure><video id="video" controls="" preload="none" poster="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.jpg"><source id="mp4" src="https://cdn.jsdelivr.net/gh/dinglinmin/Myblog_picture/a.mp4" type="video/mp4"></video><iframe height=498 width=510 src="https://cdn.jsdelivr.net/gh/dinglinmin/Myblog_picture/a.mp4" frameborder=0 allowfullscreen></iframe>]]></content>
       
       
       
